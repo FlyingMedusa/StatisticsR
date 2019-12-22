@@ -15,6 +15,7 @@ table(afl.margins)
 max(table(afl.margins))
 #max number and index
 which(table(afl.margins) == max(table(afl.margins)))
+names(which(table(afl.margins) == max(table(afl.margins))))
 
 #5.1 Measures of central tendency
 
@@ -72,3 +73,13 @@ lsr::aad(x) #lsr convenience function
 var(x) #var divides by(n -1)
 sum((afl.margins - mean(afl.margins))^2)/(length(afl.margins) - 1)
 var(afl.margins)
+
+#standard deviation
+sd(afl.margins)
+
+mean(afl.margins)
+mad(afl.margins) #median absolute deviation
+
+#Skewness indicates assymetry; positive has a long tail of high values
+psych::skew(afl.margins)
+hist(afl.margins)
